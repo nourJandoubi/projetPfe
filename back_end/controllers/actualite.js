@@ -29,7 +29,7 @@ exports.createActualite = async () => {
         const items = feed.items.map(item => ({
             ...item
         }));
-        console.log(items)
+       
         await Promise.all(items.map(item =>
             Actualite.updateOne({ link: item.link }, item, { upsert: true }).exec()
         ));

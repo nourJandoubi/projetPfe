@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 
 
 const actualite = require('./models/Actualite');
-const { route } = require('./routes/actualite');
+
 
 cron.schedule('* * * * *', () => {
     actualiteController.createActualite();
